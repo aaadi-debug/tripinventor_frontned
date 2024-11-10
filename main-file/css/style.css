@@ -87,7 +87,7 @@ footer {
 }
 
 :root {
-  --new-primary: #1b4f68;
+  --new-primary: #1e5069;
   --new-secondary: #ff7e00;
   --new-orange-light: #ff9d3c;
 }
@@ -277,7 +277,7 @@ img {
 }
 
 .bg-navy {
-  background: #162241 !important;
+  background: var(--new-primary) !important;
 }
 
 .bg-blue {
@@ -289,11 +289,15 @@ img {
 }
 
 .bg-pink {
-  background: #F56961 !important;
+  background: var(--new-secondary) !important;
 }
 
 .bg-white {
   background: #fff !important;
+}
+
+.font-ornage {
+  color: var(--new-secondary);
 }
 
 .bordernone {
@@ -1388,8 +1392,8 @@ input#submit:hover {
 }
 
 .accrodion-grp .accrodion.active .accrodion-title {
-  background: #162241;
-  border-color: #162241;
+  background: var(--new-primary);
+  border-color: var(--new-primary);
 }
 
 .accrodion-grp .accrodion.active .accrodion-title h5 {
@@ -4440,7 +4444,7 @@ nav.navbar.navbar-default.navbar-sticky-in .logo-black {
 }
 
 .sidebar-sticky .list-sidebar .sidebar-item .pretty.p-icon input:checked~.state .icon {
-  background: #F56961;
+  background: var(--new-secondary);
 }
 
 .sidebar-sticky .list-sidebar .sidebar-item .range-slider {
@@ -4448,7 +4452,7 @@ nav.navbar.navbar-default.navbar-sticky-in .logo-black {
 }
 
 .sidebar-sticky .list-sidebar .sidebar-item .range-slider .ui-slider .ui-slider-range {
-  background: #F56961;
+  background: var(--new-secondary);
 }
 
 .sidebar-sticky .list-sidebar .sidebar-item .star-rating span {
@@ -4467,12 +4471,12 @@ nav.navbar.navbar-default.navbar-sticky-in .logo-black {
 .sidebar-sticky .list-sidebar .sidebar-item .map-box i {
   display: block;
   font-size: 44px;
-  color: #ef2853;
+  color: var(--new-orange-light);
 }
 
 .sidebar-sticky .form-content {
   box-shadow: 0px 0px 30px #cccccc57;
-  background: #162241;
+  background: var(--new-primary);
   padding: 30px;
 }
 
@@ -4529,7 +4533,7 @@ nav.navbar.navbar-default.navbar-sticky-in .logo-black {
 }
 
 .progress-item .progress .progress-bar {
-  background: #F56961;
+  background: var(--new-orange-light);
 }
 
 span.location-box {
@@ -4570,7 +4574,7 @@ span.location-box {
 
 .description-images .slick-initialized .slick-prev,
 .description-images .slick-initialized .slick-next {
-  background: #F56961;
+  background: var(--new-secondary);
 }
 
 .description-images .slick-initialized .slick-prev {
