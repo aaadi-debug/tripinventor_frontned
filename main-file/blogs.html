@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>TripInventor - Login </title>
+    <title>TripInventor - Blog Single </title>
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
     <!-- Bootstrap core CSS -->
@@ -26,6 +26,7 @@
 
 <body>
 
+
     <!-- header starts -->
     <div id="header"></div>
     <!-- header ends -->
@@ -35,11 +36,11 @@
         <div class="breadcrumb-outer pt-10">
             <div class="container">
                 <div class="breadcrumb-content d-md-flex align-items-center pt-10">
-                    <h2 class="mb-0">Login</h2>
+                    <h2 class="mb-0 singleBPageTitle">Blog Single </h2>
                     <nav aria-label="breadcrumb">
                         <ul class="breadcrumb">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">My Login</li>
+                            <li class="breadcrumb-item active singleBPageTitle" aria-current="page">Blog Single </li>
                         </ul>
                     </nav>
                 </div>
@@ -50,36 +51,18 @@
     <!-- BreadCrumb Ends -->
 
 
-    <!-- login Starts -->
-    <section class="login">
+    <!-- blog starts -->
+    <section class="blog blog-left">
         <div class="container">
-            <div class="d-flex justify-content-center align-items-center">
-                <div class="login-content border p-4 w-50">
-                    <h3 class="mb-5 text-center">Hello! Sign into your account</h3>
-                    <form>
-                        <div class="form-group">
-                            <!-- <label class="">Email Address/Username</label> -->
-                            <input type="text" placeholder="Email Address/Username">
-                        </div>
-                        <div class="form-group">
-                            <!-- <label class="">Password</label> -->
-                            <input type="password" placeholder="Password">
-                        </div>
-                        <div class="form-group form-checkbox text-center mb-1">
-                            <input type="checkbox" class=""> Remember Me
-                            | <a href="#" class="yellow">Forgot password?</a>
-                        </div>
-                    </form>
-
-                    <div class="form-btn text-center">
-                        <a href="#" class="nir-btn mb-2">LOGIN</a>
-                        <p class="">Need an Account? <a href="./signup.html">Create an account</a></p>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="blog-single">
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Login Ends -->
+    <!-- blog Ends -->
 
     <!-- footer starts -->
     <div id="footer"></div>
@@ -91,119 +74,8 @@
     </div>
     <!-- Back to top ends -->
 
-    <!-- search popup -->
-    <div id="search1">
-        <button type="button" class="close">×</button>
-        <form>
-            <input type="search" value="" placeholder="type keyword(s) here" />
-            <button type="submit" class="btn btn-primary">Search</button>
-        </form>
-    </div>
-
-    <!-- Register Modal -->
-    <div class="modal fade" id="register" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header bordernone p-0">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body p-0">
-                    <div class="login-content p-4 text-center">
-                        <div class="login-title section-border">
-                            <h3 class="pink mb-1">Register</h3>
-                            <p>Access thousands of online classes in design, business, and more!</p>
-                        </div>
-                        <div class="login-form text-center">
-                            <form>
-                                <div class="form-group">
-                                    <input type="text" placeholder="Enter Full Name">
-                                </div>
-                                <div class="form-group">
-                                    <input type="email" placeholder="Enter email address">
-                                </div>
-                                <div class="form-group">
-                                    <input type="password" placeholder="Enter password">
-                                </div>
-                                <div class="form-group">
-                                    <input type="password" placeholder="Confirm password">
-                                </div>
-                            </form>
-                            <div class="form-btn">
-                                <a href="#" class="nir-btn">Register</a>
-                            </div>
-                            <div class="form-group mb-0 form-checkbox mt-3">
-                                <input type="checkbox"> By clicking this, you are agree to to<a href="#" class=""> our
-                                    terms of use</a> and <a href="#" class="">privacy policy</a> including the use of
-                                cookies
-                            </div>
-                        </div>
-                        <div class="login-social border-t mt-3 pt-2 mb-3">
-                            <p class="mb-2">OR continue with</p>
-                            <a href="#" class="btn-facebook"><i class="fab fa-facebook" aria-hidden="true"></i>
-                                Facebook</a>
-                            <a href="#" class="btn-twitter"><i class="fab fa-twitter" aria-hidden="true"></i>
-                                Twitter</a>
-                            <a href="#" class="btn-google"><i class="fab fa-google" aria-hidden="true"></i> Google</a>
-                        </div>
-                        <div class="sign-up">
-                            <p class="m-0">Already have an account? <a href="login.html" class="pink">Login</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- login Modal -->
-    <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header bordernone p-0">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body p-0">
-                    <div class="login-content p-4 text-center">
-                        <div class="login-title section-border">
-                            <h3 class="pink">Login</h3>
-                        </div>
-                        <div class="login-form">
-                            <form>
-                                <div class="form-group">
-                                    <input type="email" placeholder="Enter email address">
-                                </div>
-                                <div class="form-group">
-                                    <input type="password" placeholder="Enter password">
-                                </div>
-                            </form>
-                            <div class="form-btn">
-                                <a href="#" class="nir-btn">LOGIN</a>
-                            </div>
-                            <div class="form-group mb-0 form-checkbox mt-3">
-                                <input type="checkbox"> Remember Me | <a href="#" class="">Forgot password?</a>
-                            </div>
-                        </div>
-                        <div class="login-social border-t mt-3 pt-2 mb-3">
-                            <p class="mb-2">OR continue with</p>
-                            <a href="#" class="btn-facebook"><i class="fab fa-facebook" aria-hidden="true"></i>
-                                Facebook</a>
-                            <a href="#" class="btn-twitter"><i class="fab fa-twitter" aria-hidden="true"></i>
-                                Twitter</a>
-                        </div>
-                        <div class="sign-up">
-                            <p class="m-0">Do not have an account? <a href="login.html" class="pink">Sign Up</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!-- header side menu -->
-    <div class="header_sidemenu">
+    <!-- <div class="header_sidemenu">
         <div class="header_sidemenu_in">
             <div class="menu">
                 <div class="close-menu">
@@ -282,7 +154,7 @@
             </div>
             <div class="overlay hide"></div>
         </div>
-    </div>
+    </div> -->
 
     <script>
         // Function to load HTML content with AJAX
@@ -298,6 +170,68 @@
         // Load the header and footer using AJAX
         loadContent("header.html", "header");
         loadContent("footer.html", "footer");
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const blogContainer = document.querySelector(".blog-single");
+
+            // Extract the blog title from the URL parameter
+            const urlParams = new URLSearchParams(window.location.search);
+            const blogTitle = urlParams.get("title");
+
+            const titleElements = document.getElementsByClassName('singleBPageTitle');
+            for (let element of titleElements) {
+                element.innerText = blogTitle;
+            }
+
+            // let singleBPageTitle = document.querySelectorAll('.singleBPageTitle');
+            // singleBPageTitle.innerHTML = blogTitle;
+
+            if (blogTitle) {
+                fetch("blog.json")
+                    .then(response => response.json())
+                    .then(data => {
+                        const blogData = data.find(blog => blog.title === decodeURIComponent(blogTitle));
+
+                        if (blogData) {
+                            blogContainer.innerHTML = `
+                    <div class="blog-imagelist mb-3">
+                        <img src="${blogData.image}" alt="Blog Image">
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-2 col-md-2">
+                            <div class="date text-center bg-pink p-2">
+                                <h1 class="day mb-0 white">${new Date(blogData.date).getDate()}</h1>
+                                <div class="month white">${new Date(blogData.date).toLocaleString('default', { month: 'short' })}</div>
+                            </div>
+                        </div>
+                        <div class="col-lg-10 col-md-10">
+                            <div class="blog-content mb-4 pt-0">
+                                <h3 class="blog-title yellow">${blogData.title}</h3>
+                                <div class="para-content mb-2">
+                                    <span class="mr-2"><a href="#" class="tag pink"><i class="fa fa-tag mr-1"></i> ${blogData.category}</a></span>
+                                    <span class="mr-2"><a href="#" class="pink"><i class="fa fa-user mr-1"></i> ${blogData.author}</a></span>
+                                </div>
+                                <p>${blogData.description}</p>
+                                <p class="mb-0">${blogData.content}</p>
+                            </div>
+                            <!-- Additional sections like blockquote, images, and comments can be inserted similarly -->
+                        </div>
+                    </div>
+                `;
+                        } else {
+                            blogContainer.innerHTML = "<p>Blog post not found.</p>";
+                        }
+                    })
+                    .catch(error => {
+                        console.error("Error loading blog:", error);
+                        blogContainer.innerHTML = "<p>Error loading blog post.</p>";
+                    });
+            } else {
+                blogContainer.innerHTML = "<p>No blog title specified in URL.</p>";
+            }
+        });
     </script>
 
     <!-- *Scripts* -->

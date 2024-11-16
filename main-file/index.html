@@ -18,14 +18,16 @@
     <!--Flaticons CSS-->
     <link href="fonts/flaticon.css" rel="stylesheet" type="text/css">
     <!--Font Awesome-->
-    
+
 
     <link rel="stylesheet" href="fonts/line-icons.css" type="text/css">
 </head>
 
 <body>
-
-   <div id="header"></div>
+    <div id="preloader">
+        <div id="status"></div>
+    </div>
+    <div id="header"></div>
     <!-- banner starts -->
     <section class="banner overflow-hidden">
         <div class="slider">
@@ -1540,7 +1542,7 @@
     <div id="WhatsAppBtn">
         <a href="https://wa.me/+919718171912" target="_blank">dj
             <i class="fa-brands fa-whatsapp"></i>
-        </a>
+        </a>    
     </div>
     <!-- WhatsApp ends -->
 
@@ -1730,18 +1732,19 @@
     <script>
         // Function to load HTML content with AJAX
         function loadContent(url, elementId) {
-          fetch(url)
-            .then(response => response.text())
-            .then(data => {
-              document.getElementById(elementId).innerHTML = data;
-            })
-            .catch(error => console.error('Error loading content:', error));
+            fetch(url)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById(elementId).innerHTML = data;
+                })
+                .catch(error => console.error('Error loading content:', error));
         }
-    
+
         // Load the header and footer using AJAX
         loadContent("header.html", "header");
         loadContent("footer.html", "footer");
-      </script>
+    </script>
+
     <!-- *Scripts* -->
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
