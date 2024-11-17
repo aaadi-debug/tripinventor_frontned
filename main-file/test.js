@@ -68,15 +68,14 @@ document.addEventListener("DOMContentLoaded", () => {
                                 <tbody>
                                     <tr>
                                         <td><i class="fa fa-clock-o pink mr-1" aria-hidden="true"></i> Duration: ${destinationData?.details?.duration} Days</td>
-                                        
-                                        <td><i class="fa fa-file-alt pink mr-1" aria-hidden="true"></i> Langauge -
-                                            ${destinationData?.details?.languages}</td>
+                                        <td><i class="fa fa-group pink mr-1" aria-hidden="true"></i> Max People : ${destinationData?.details?.maxPeople}
+                                        </td>
                                     </tr>
                                     <tr>
-                                        <td><i class="fa fa-map-signs pink mr-1" aria-hidden="true"></i> Hotel :
+                                        <td><i class="fa fa-map-signs pink mr-1" aria-hidden="true"></i> Pickup :
                                             ${destinationData?.details?.pickup}</td>
-                                        <td><i class="fa fa-group pink mr-1" aria-hidden="true"></i> Package Cost : ${destinationData?.details?.maxPeople}
-                                        </td>
+                                        <td><i class="fa fa-file-alt pink mr-1" aria-hidden="true"></i> Langauge -
+                                            ${destinationData?.details?.languages}</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -84,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                           <div class="description mb-2">
                             <h4>Description</h4>
-                            <p>${destinationData?.descriptions.join(`<br>`) || "No Description Available"}</p>
+                            <p>${destinationData?.descriptions.join(`<br>`)}</p>
                           </div>
 
                           <div class="description mb-2">
@@ -92,48 +91,52 @@ document.addEventListener("DOMContentLoaded", () => {
                                 <div class="col-lg-6 col-md-6 mb-2 pr-2">
                                     <div class="desc-box">
                                         <h5 class="mb-1">Departure & Return Location</h5>
-                                        <p class="mb-0">${destinationData?.additionalInfo?.location || "N/A"} </p>
+                                        <p class="mb-0">${destinationData?.additionalInfo?.location}</p>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6 mb-2 pl-2">
                                     <div class="desc-box">
                                         <h5 class="mb-1">Bedroom</h5>
-                                        <p class="mb-0">${destinationData?.additionalInfo?.bedroom || "N/A"} Bedrooms</p>
+                                        <p class="mb-0">${destinationData?.additionalInfo?.bedroom} Bedrooms</p>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6 mb-2 pr-2">
                                     <div class="desc-box">
                                         <h5 class="mb-1">Arrival Time</h5>
-                                        <p class="mb-0">${destinationData?.additionalInfo?.arrivalTime || "N/A"}</p>
+                                        <p class="mb-0">${destinationData?.additionalInfo?.arrivalTime}</p>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6 mb-2 pl-2">
                                     <div class="desc-box">
                                         <h5 class="mb-1">Departure Time</h5>
-                                        <p class="mb-0">${destinationData?.additionalInfo?.departureTime || "N/A"}</p>
+                                        <p class="mb-0">${destinationData?.additionalInfo?.departureTime}</p>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6 mb-2 pr-2">
                                     <div class="desc-box">
-                                        <h5 class="mb-1">Inclusions</h5>
+                                        <h5 class="mb-1">Price Includes</h5>
                                         <ul>
                                             ${destinationData?.additionalInfo?.includes.map(
-                                                (item) => `<li><i class="fa fa-check pink mr-1"></i> ${item}</li>`
-                                            ).join("")}
+                        (item) => `<li><i class="fa fa-check pink mr-1"></i> ${item}</li>`
+                    ).join("")}
                                         </ul>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6 mb-2 pl-2">
                                     <div class="desc-box">
-                                        <h5 class="mb-1">Exclusions</h5>
+                                        <h5 class="mb-1">Price Excludes</h5>
                                         <ul>
                                             ${destinationData?.additionalInfo?.excludes.map(
-                                                (item) => `<li><i class="fa fa-close pink mr-1"></i> ${item}</li>`
-                                            ).join("")}
+                        (item) => `<li><i class="fa fa-check pink mr-1"></i> ${item}</li>`
+                    ).join("")}
                                         </ul>
                                     </div>
                                 </div>
                             </div>
+                          </div>
+                          <div class="description mb-4">
+                            <h4>What to Expect</h4>
+                            <p>${destinationData?.whattoexpect.join(`<br>`)}</p>
                           </div>
                           
 

@@ -4621,6 +4621,7 @@ span.location-box {
 .desc-box li {
   display: block;
   line-height: 2;
+  font-size: 15px;
 }
 
 .description-images .slick-initialized .slick-slide {

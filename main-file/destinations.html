@@ -32,6 +32,8 @@
 
         .accordion-outer {
             margin-bottom: 10px;
+            position: relative;
+            /* Ensure the layout doesn’t shift unexpectedly */
         }
 
         .accordion-heading {
@@ -41,28 +43,41 @@
             padding: 0.5rem;
             color: #fff;
             padding: 14px 20px;
+            cursor: pointer;
+            /* Makes it clear that this element is interactive */
         }
 
         .accordion-content {
             border: 1px solid #1e5069;
             display: grid;
             grid-template-rows: 0fr;
-            transition: grid-template-rows 1s;
+            transition: grid-template-rows 0.8s ease;
+            overflow: hidden;
+            /* Ensures content doesn't spill out */
         }
 
         .accordion-inner {
             overflow: hidden;
         }
 
-        .accordion-heading:hover+.accordion-content {
+        /* .accordion-heading:hover+.accordion-content {
             grid-template-rows: 1fr;
-        }
+        } */
 
 
         .accordion-inner__inner {
             background: #fff;
             color: #000;
             padding: 1rem;
+        }
+
+        .accordion-inner__inner p {
+            font-size: 15px;
+            color: #6c6c74;
+        }
+
+        .accordion-outer:hover .accordion-content {
+            grid-template-rows: 1fr;
         }
 
 
@@ -102,7 +117,7 @@
             cursor: pointer;
             transition: 0.5s all;
         }
-        
+
         .carousel-controls button:hover {
             background-color: #ff7e00;
         }

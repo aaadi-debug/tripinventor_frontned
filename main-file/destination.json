@@ -99,6 +99,133 @@
     ]
   },
   {
+    "title": "Dubai Package",
+    "discount": "",
+    "image": "images/destination/destination3.jpg",
+    "rating": 4,
+    "places": "2 PAX",
+    "location": "Dubai",
+    "price": "35,000.00",
+    "duration": "5 days 4 nights",
+
+    "reviewCount": 10,
+    "pricingData": {
+      "pricePerDayPerPerson": 150,
+      "bookingFee": 10,
+      "discount": 15,
+      "otherFees": 0
+    },
+    "images": [
+      "images/slider/1.jpg",
+      "images/slider/2.jpg",
+      "images/slider/3.jpg",
+      "https://img.freepik.com/premium-photo/lake-with-mountains-background_901003-52335.jpg",
+      "https://next-images.123rf.com/index/_next/image/?url=https://assets-cdn.123rf.com/index/static/assets/top-section-bg.jpeg&w=3840&q=75",
+      "https://img.freepik.com/premium-photo/lake-with-mountains-background_901003-52335.jpg"
+    ],
+    "details": {
+      "duration": "5 days 4 nights",
+      "maxPeople": "35000 INR Per Person on Double Sharing Basis",
+      "pickup": "04 STAR Arabian Courtyard Hotel & Spa (Royal Ascot Hotel Similar)",
+      "languages": [
+        "English",
+        "Hindi"
+      ]
+    },
+    "descriptions": [
+      
+    ],
+    "additionalInfo": {
+      "location": "Dubai",
+      "bedroom": "",
+      "arrivalTime": "",
+      "departureTime": "15 minutes before the time given",
+      "includes": [
+        "04 Night accommodation in Dubai",
+        "Daily Buffet Breakfast",
+        "One-way Transfer from Airport to Dubai Hotel - Private from Dubai International Airport",
+        "Dhow Cruise with Dinner - Marina Cruise - 3 Star experience with Shared Transfers",
+        "Half Day Dubai City Tour - Private Vehicle",
+        "Top of Burj Khalifa - Seat in Coach Transfers - 124th Floor (Between 9 am - 2 pm or 7 pm - 10 pm slot)",
+        "Desert Safari with Dune Bashing, Belly Dancing and Barbeque Dinner - Sharing Basis with Premium Camp",
+        "Abu Dhabi City Tour with Transfers From Dubai - Shared Transfer With Baps Hindu Mandir Visit",
+        "One-way Transfer from Dubai Hotel to Airport - Private to Dubai International Airport"
+      ],
+      "excludes": [
+        "Flight",
+        "Dubai Visa",
+        "Travel Insurance",
+        "Personal Expense",
+        "Tourism Dirham Fee",
+        "Anything which is not mentioned in inclusions"
+      ]
+    },
+    "whattoexpect": [
+      "New paragraph 1.",
+      "New paragraph 2."
+    ],
+    "itinerary": [
+      {
+        "id": 1,
+        "day": "Day 1",
+        "title": "Arrival into Dubai - Check-in - Evening Dhow Cruise",
+        "content": [
+          "You will be met by our representative at the Airport Arrival Terminal. Our representative will be holding a signage card with your Name written on it. You will then be escorted to waiting vehicle for transfer to hotel.",
+          "A daily evening two hour cruise along the man made Dubai Marina for sightseeing of luxurious and modern landmarks which have soured Dubai in the shape of sky touching towers for residential and commercial purpose over the past decade. This cruise is also accompanied by complimentary International Buffet dinner from a five star hotel, soft drinks, mineral water & live entertainment - tanoura dance show. The dhows are fully insured, safety fitted and fully air-conditioned for your safety and enjoyment. Ladies and gents washrooms as well as an open air upper deck are also part of the dhow structure. You can not miss these dhows and you find them elegantly gliding the Marina Promenade and into the open sea where the splendid Palm Island floats in front of you."
+        ]
+      },
+      {
+        "id": 2,
+        "day": "Day 2",
+        "title": "Dubai Mall And Top Of Burj Khalifa - Morning Half Day City Tour",
+        "content": [
+          "Transfer to Dubai Mall, one of the largest malls in the world and home to over 1200 stores. Later proceed to the Top of Burj Khalifa, World's Tallest Tower. Burj Khalifa visit begins in the reception area on the lower ground level of The Dubai Mall. Here and throughout your journey, you will be entertained and informed by a multi-media presentation that chronicles Dubai's exotic history and the fascinating story of Burj Khalifa. Begin your vertical ascent to the observation deck in a high-speed elevator, travelling at 10 metres per second. As the doors open on the 124th Floor, floor-to-ceiling glass walls provide a breath-taking unobstructed 360-degree view of the city, desert & ocean. Spend half an hour at the top and then come down, and at 7 pm watch the Dubai Fountains come alive. There is a 10 minute show every 20 minutes and its lovely to watch the largest fountain in the world.",
+          "Proceed for a panoramic half day city tour of Dubai. The tour will pass by Gold Souk, old Bur Dubai including Al Seef, Bastakiya, Meena Bazar, as per the last pickup location of the hotel. There will be a 15-minute photo stop at Dubai Frame and Zabeel Palace ( Zabeel Palace may be skipped in case of shortage of time). The tour will also pass by Burj Khalifa, Dubai Mall, and Sheikh Zayed Road. A 20-minute photo stop will be made at either Jumeirah Open Beach or Burj Al Arab beach, followed by a pass by the front view of Burj Al Arab. Another 20-minute photo stop will be made at Palm Jumeriah Island, specifically Atlantis the Pointe, or guests can opt for a 30-45 minute ride on the One Way Mono Rail from Gateway or Nakheel Station. The tour will then pass by Ski Dubai at Mall of the Emirates before heading towards old Dubai from Sheikh Zayed Road."
+        ]
+      },
+      {
+        "id": 3,
+        "day": "Day 3",
+        "title": "Evening Desert Safari With Dinner",
+        "content": [
+          "The Evening Desert Safari is a must-do for any adventure seekers visiting Dubai. Convenient round trip transportation will pick you up from your hotel and take you out to explore the Arabian desert. Test your balancing skills in an exhilarating sand boarding experience or try out the other many fun activities available for you to do including camel riding, dune bashing and henna painting. Take time to look around and take pictures, this tour is a great opportunity to capture breathtaking views of the desert during sunset. End the night with belly dancing show under the stars while indulging in a delicious BBQ dinner with unlimited soft drinks and shisha smoking (at extra cost)."
+        ]
+      },
+      {
+        "id": 4,
+        "day": "Day 4",
+        "title": "Full Day Abu Dhabi City Tour",
+        "content": [
+          "Note: After all pickups are done, we will proceed towards Abu Dhabi via Sheikh Zayed Road pass by MOTF, Burj Khalifa, MOE, Marina, ,Jabeel Ali port ,Dubai Parks, Visit to Hindu Temple BAPS AUH -1 hour-1.30 hours",
+          "Pass by Abu Dhabi Airport new terminal and Yas Island ,Al Dar Tower reach Abu Dhabi main Island",
+          "Photo Stop at Sheikh Zayed Grand Mosque - 15 min",
+          "Proceed toward Main Abu Dhabi lsland pass by Capital Gate hotel world's leanest tower,Pass by President Palace, Qsar Al watan , emirates palace, nation tower, Etihad towers 15 min photo stop at Marina",
+          "Pass by cornice beach and move towards port zayed for dates market 20 min stop at dates market",
+          "Passing by Islands, Sadiyat Island, Jubil Island towards Ferrari World Yas Island photo stop at Ferrari world -15 min",
+          "After Ferrari World stop Move towards Dubai and drop back to hotels"
+        ]
+      },
+      {
+        "id": 4,
+        "day": "Day 5",
+        "title": "Departure from Dubai",
+        "content": [
+          "You will be picked up from Hotel's lobby at the time confirmed. Please be available at the lobby 15 minutes before the time given and you will be transferred to the airport for your flight."
+        ]
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Sahil",
+        "date": "April 25, 2019",
+        "rating": 2,
+        "src": "",
+        "title": "The worst hotel ever",
+        "content": "Take in the iconic skyline and visit the neighbourhood hangouts that you've only ever seen on TV."
+      }
+    ]
+  },
+  {
     "title": "Empire Prestige Causeway Bay",
     "image": "images/destination/destination4.jpg",
     "rating": 5,
