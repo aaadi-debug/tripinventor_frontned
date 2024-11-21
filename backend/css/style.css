@@ -652,6 +652,35 @@ blockquote {
   height: 100vh;
   display: flex;
   border-radius: 5px;
+  position: relative;
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+  display: none;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: var(--new-primary);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* Tab Buttons Wrapper */
+.tab-buttons-wrapper {
+  position: relative;
+  width: 250px;
+  transition: transform 0.3s ease;
+  overflow-x: hidden;
+}
+
+/* Hidden State for Tab Buttons (Mobile) */
+.tab-buttons-wrapper.hidden {
+  transform: translateX(-100%);
 }
 
 /* Tab buttons */
@@ -662,6 +691,8 @@ blockquote {
   flex-direction: column;
   border-right: 1px solid #ccc;
   padding: 10px;
+  height: 100%;
+  overflow-y: auto;
 }
 
 .tab-buttons img {
@@ -709,4 +740,31 @@ blockquote {
 
 .tab-panel.active {
   display: block;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .tab-container {
+    flex-direction: column;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+
+  .tab-buttons-wrapper {
+    position: absolute;
+    height: 100%;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+  }
+
+  .tab-content {
+    flex-grow: 1;
+    padding: 20px;
+    margin-top: 50px;
+  }
 }
