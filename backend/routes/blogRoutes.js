@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Destination = require('../models/Destination');
+const Blog = require('../models/Blog');
 
 // // Fetch all destinations
 // router.get('/', async (req, res) => {
@@ -18,61 +18,63 @@ const Destination = require('../models/Destination');
 //     }
 //     res.status(200).json(destination);
 // });
-// Fetch all destinations or a specific destination by title
+
+
+// Fetch all blogs or a specific blog by title
 router.get('/', async (req, res) => {
     try {
         const { title } = req.query;
 
         if (title) {
-            // Fetch a single destination by title
-            const destination = await Destination.findOne({ title });
-            if (!destination) {
-                return res.status(404).json({ message: 'Destination not found' });
+            // Fetch a single blog by title
+            const blog = await Blog.findOne({ title });
+            if (!blog) {
+                return res.status(404).json({ message: 'Blog not found' });
             }
-            return res.status(200).json(destination);
+            return res.status(200).json(blog);
         }
 
-        // Fetch all destinations
-        const destinations = await Destination.find();
-        res.status(200).json(destinations);
+        // Fetch all blogs
+        const blogs = await Blog.find();
+        res.status(200).json(blogs);
     } catch (error) {
         res.status(500).json({ message: error.message });
     }
 });
 
 
-// Add a new destination
+// Add a new blog
 router.post('/', async (req, res) => {
     try {
-        const destination = new Destination(req.body);
-        const savedDestination = await destination.save();
-        res.status(201).json(savedDestination);
+        const blog = new Blog(req.body);
+        const savedBlog = await blog.save();
+        res.status(201).json(savedBlog);
     } catch (error) {
         res.status(400).json({ message: error.message });
     }
 });
 
-// Update a destination
+// Update a blog
 router.put('/:id', async (req, res) => {
     try {
-        const updatedDestination = await Destination.findByIdAndUpdate(req.params.id, req.body, { new: true });
-        if (!updatedDestination) {
-            return res.status(404).json({ message: 'Destination not found' });
+        const updatedBlog = await Blog.findByIdAndUpdate(req.params.id, req.body, { new: true });
+        if (!updatedBlog) {
+            return res.status(404).json({ message: 'Blog not found' });
         }
-        res.status(200).json(updatedDestination);
+        res.status(200).json(updatedBlog);
     } catch (error) {
         res.status(400).json({ message: error.message });
     }
 });
 
-// Delete a destination
+// Delete a blog
 router.delete('/:id', async (req, res) => {
     try {
-        const deletedDestination = await Destination.findByIdAndDelete(req.params.id);
-        if (!deletedDestination) {
-            return res.status(404).json({ message: 'Destination not found' });
+        const deletedBlog = await Blog.findByIdAndDelete(req.params.id);
+        if (!deletedBlog) {
+            return res.status(404).json({ message: 'Blog not found' });
         }
-        res.status(200).json({ message: 'Destination deleted successfully' });
+        res.status(200).json({ message: 'Blog deleted successfully' });
     } catch (error) {
         res.status(500).json({ message: error.message });
     }

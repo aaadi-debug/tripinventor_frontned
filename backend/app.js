@@ -4,6 +4,9 @@ const cors = require('cors');
 const connectDB = require('./config/db');
 const userRoutes = require('./routes/userRoutes');
 const destinationRoutes = require('./routes/destinationRoutes');
+const blogRoutes = require('./routes/blogRoutes');
+const bookingRoutes = require('./routes/bookingRoutes');
+const reviewRoutes = require('./routes/reviewRoutes');
 
 const app = express();
 
@@ -14,13 +17,21 @@ require('dotenv').config();
 connectDB();
 
 // Middleware
-app.use(cors());
+const corsOptions = {
+    origin: 'http://127.0.0.1:5500', // Frontend origin
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    credentials: true
+};
+app.use(cors(corsOptions));
 app.use(bodyParser.json());
 app.use(express.json());
 
 // API Routes
 app.use('/api/users', userRoutes);
 app.use('/api/destinations', destinationRoutes);
+app.use('/api/blogs', blogRoutes);
+app.use('/api', bookingRoutes);
+app.use('/api', reviewRoutes);
 
 // Start the server
 const PORT = process.env.PORT || 5000;

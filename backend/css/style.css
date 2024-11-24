@@ -108,6 +108,18 @@ body {
   scroll-behavior: smooth;
 }
 
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+  display: block;
+}
+
+.input-box input:focus {
+  border-color: #f00; /* Highlight input border on error */
+  outline: none;
+}
+
 h1,
 h2,
 h3,
