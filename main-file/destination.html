@@ -69,9 +69,11 @@
       let itemsPerPage = 10; // Number of items to load per page
       let currentPage = 0; // Current page number
       let allData = []; // To store the fetched data
+      const BACKEND_URL = window.location.hostname === '127.0.0.1' ? 'http://localhost:5000' : 'https://your-production-backend.com';
 
-      // Fetch data from the JSON file
-      fetch("destination.json")
+
+      // Fetch data from the JSON file  
+      fetch(`${BACKEND_URL}/api/destinations/`)
         .then((response) => response.json())
         .then((data) => {
           allData = data; // Store fetched data
@@ -80,6 +82,21 @@
         .catch((error) => {
           console.error("Error fetching data:", error);
         });
+
+      // Fetch data from the backend API
+      // const fetchDestinations = async () => {
+      //   try {
+      //     const response = await fetch("http://localhost:5000/api/destinations");
+      //     if (!response.ok) {
+      //       throw new Error("Failed to fetch destinations");
+      //     }
+      //     const data = await response.json();
+      //     allData = data; // Store fetched data
+      //     renderCards(); // Render the initial set of items
+      //   } catch (error) {
+      //     console.error("Error fetching data:", error);
+      //   }
+      // };
 
       // Function to render a specific number of cards
       const renderCards = () => {
@@ -95,10 +112,11 @@
                           <div class="ribbon ribbon-top-left">
                             <span>${item.discount}</span>
                           </div>` : ""
-                        }
+            }
                         <div class="col-lg-5 col-md-4 col-xs-12 blog-height">
                             <div class="blog-image">
-                                <a href="destinations.html?title=${encodeURIComponent(item.title)}" style="background-image: url(${item.image});"></a>
+                                <a href="destinations.html?title=${encodeURIComponent(item.title)}" style="background-image: url(${item.images[0]});">
+                                </a>
                             </div> 
                         </div>
                         <div class="col-lg-7 col-md-8 col-xs-12">

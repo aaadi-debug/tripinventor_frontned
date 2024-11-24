@@ -188,11 +188,22 @@
             // let singleBPageTitle = document.querySelectorAll('.singleBPageTitle');
             // singleBPageTitle.innerHTML = blogTitle;
 
+            const BACKEND_URL = window.location.hostname === '127.0.0.1' ? 'http://localhost:5000' : 'https://your-production-backend.com';
+
+
             if (blogTitle) {
-                fetch("blog.json")
-                    .then(response => response.json())
-                    .then(data => {
-                        const blogData = data.find(blog => blog.title === decodeURIComponent(blogTitle));
+                // fetch("blog.json")
+                fetch(`${BACKEND_URL}/api/blogs?title=${encodeURIComponent(blogTitle)}`)
+                    // .then(response => response.json())
+                    // .then(data => {
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error(`HTTP error! Status: ${response.status}`);
+                        }
+                        return response.json();
+                    })
+                    .then(blogData => {
+                        // const blogData = data.find(blog => blog.title === decodeURIComponent(blogTitle));
 
                         if (blogData) {
                             blogContainer.innerHTML = `

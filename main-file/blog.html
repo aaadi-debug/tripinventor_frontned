@@ -46,7 +46,7 @@
     <section class="blog pb-6 ">
         <div class="container">
             <div id="blog-container" class="row">
-                
+
             </div>
 
             <div class="blog-button text-center">
@@ -63,59 +63,103 @@
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const blogContainer = document.getElementById("blog-container");
-            let blogsPerPage = 9;
-            let currentPage = 0;
-            let blogsData = [];
+            const loadMoreButton = document.querySelector(".nir-btn");
+            let itemsPerPage = 10; // Number of items to load per page
+            let currentPage = 0; // Current page number
+            let allData = [];
+            const BACKEND_URL = window.location.hostname === '127.0.0.1' ? 'http://localhost:5000' : 'https://your-production-backend.com';
+
 
             // Fetch data from blog.json
-            fetch("blog.json")
-                .then(response => response.json())
-                .then(data => {
-                    blogsData = data;
-                    loadMoreBlogs();
+            fetch(`${BACKEND_URL}/api/blogs/`)
+                .then((response) => response.json())
+                .then((data) => {
+                    allData = data; // Store fetched data
+                    renderCards(); // Render the initial set of items
                 })
-                .catch(error => console.error("Error loading blogs:", error));
-
-            // Function to load more blogs
-            function loadMoreBlogs() {
-                const start = currentPage * blogsPerPage;
-                const end = start + blogsPerPage;
-                const blogsToDisplay = blogsData.slice(start, end);
-
-                blogsToDisplay.forEach(blog => {
-                    const blogHTML = `
-                <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 mansonry-item mb-2">
-                    <div class="blog-full text-center p-3">
-                        <img src="${blog.image}" alt="">
-                        <div class="blog-content pb-0">
-                            <span class="h-date pink mb-1 font-weight-light d-block">${blog.date}</span>
-                            <h3 class="mb-2"><a href="blogs.html?title=${encodeURIComponent(blog.title)}" class="">${blog.title}</a></h3>
-                            <p class="date-cats mb-0 border-t pt-2 pb-2">
-                                <a href="blogs.html?title=${encodeURIComponent(blog.title)}" class="mr-2"><i class="fa-solid fa-layer-group"></i> ${blog.category}</a> 
-                                <a href="#" class=""><i class="fa-solid fa-user-tie"></i> ${blog.author}</a>
-                            </p> 
-                            <p class="mb-2 border-t pt-2">${blog.description}</p>
-                            <a href="blogs.html?title=${encodeURIComponent(blog.title)}" class="grey font-weight-light">Read This <i class="fa fa-long-arrow-alt-right"></i></a>
-                        </div>                        
-                    </div>
-                </div>`;
-                    blogContainer.insertAdjacentHTML("beforeend", blogHTML);
+                .catch((error) => {
+                    console.error("Error fetching data:", error);
                 });
 
-                currentPage++;
+            // Function to load more blogs
+            const renderCards = () => {
+                // const start = currentPage * blogsPerPage;
+                // const end = start + blogsPerPage;
+                // const blogsToDisplay = blogsData.slice(start, end);
 
-                // Hide "Load More" if no more blogs to load
-                if (currentPage * blogsPerPage >= blogsData.length) {
-                    document.getElementById("load-more").style.display = "none";
+                const startIndex = currentPage * itemsPerPage;
+                const endIndex = startIndex + itemsPerPage;
+                const itemsToRender = allData.slice(startIndex, endIndex);
+
+                itemsToRender.forEach((item) => {
+                    const card = `
+                <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 mansonry-item mb-2">
+                    <div class="blog-full text-center p-3">
+                        <img src="${item.image}" alt="">
+                        <div class="blog-content pb-0">
+                            <span class="h-date pink mb-1 font-weight-light d-block">${item.date}</span>
+                            <h3 class="mb-2"><a href="blogs.html?title=${encodeURIComponent(item.title)}" class="">${item.title}</a></h3>
+                            <p class="date-cats mb-0 border-t pt-2 pb-2">
+                                <a href="blogs.html?title=${encodeURIComponent(item.title)}" class="mr-2"><i class="fa-solid fa-layer-group"></i> ${item.category}</a> 
+                                <a href="#" class=""><i class="fa-solid fa-user-tie"></i> ${item.author}</a>
+                            </p> 
+                            <p class="mb-2 border-t pt-2">${item.description}</p>
+                            <a href="blogs.html?title=${encodeURIComponent(item.title)}" class="grey font-weight-light">Read This <i class="fa fa-long-arrow-alt-right"></i></a>
+                        </div>                        
+                    </div>
+                </div>
+              `;
+                    blogContainer.insertAdjacentHTML("beforeend", card);
+                });
+
+                // Hide the button if no more items to load
+                if (endIndex >= allData.length) {
+                    loadMoreButton.style.display = "none";
                 }
+
+                // Load More button event listener
+                loadMoreButton.addEventListener("click", () => {
+                    currentPage++;
+                    renderCards();
+                });
+
+                // blogsToDisplay.forEach(blog => {
+                //     const blogHTML = `
+                // <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 mansonry-item mb-2">
+                //     <div class="blog-full text-center p-3">
+                //         <img src="${blog.image}" alt="">
+                //         <div class="blog-content pb-0">
+                //             <span class="h-date pink mb-1 font-weight-light d-block">${blog.date}</span>
+                //             <h3 class="mb-2"><a href="blogs.html?title=${encodeURIComponent(blog.title)}" class="">${blog.title}</a></h3>
+                //             <p class="date-cats mb-0 border-t pt-2 pb-2">
+                //                 <a href="blogs.html?title=${encodeURIComponent(blog.title)}" class="mr-2"><i class="fa-solid fa-layer-group"></i> ${blog.category}</a> 
+                //                 <a href="#" class=""><i class="fa-solid fa-user-tie"></i> ${blog.author}</a>
+                //             </p> 
+                //             <p class="mb-2 border-t pt-2">${blog.description}</p>
+                //             <a href="blogs.html?title=${encodeURIComponent(blog.title)}" class="grey font-weight-light">Read This <i class="fa fa-long-arrow-alt-right"></i></a>
+                //         </div>                        
+                //     </div>
+                // </div>`;
+                //     blogContainer.insertAdjacentHTML("beforeend", blogHTML);
+                // });
+
+                // currentPage++;
+
+                // // Hide "Load More" if no more blogs to load
+                // if (currentPage * blogsPerPage >= blogsData.length) {
+                //     document.getElementById("load-more").style.display = "none";
+                // }
             }
 
-            // Add event listener for "Load More" button
-            document.getElementById("load-more").addEventListener("click", loadMoreBlogs);
+            // // Add event listener for "Load More" button
+            // document.getElementById("load-more").addEventListener("click", () => {
+            //     loadMoreBlogs
+            //     renderCards();
+            // });
         });
 
     </script>
-    
+
     <script>
         // Function to load HTML content with AJAX
         function loadContent(url, elementId) {

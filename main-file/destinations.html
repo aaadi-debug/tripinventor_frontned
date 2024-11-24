@@ -445,10 +445,44 @@
                             </form>
                         </div>
                     </div>
+                    <!-- Write a Review Section -->
+                    <div class="single-add-review">
+                        <h4>Write a Review</h4>
+                        <form id="reviewForm">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" id="reviewerName" placeholder="Name" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="email" id="reviewerEmail" placeholder="Email" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <textarea id="reviewContent" placeholder="Comment" required></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">    
+                                        <input type="number" id="reviewRating" placeholder="Rating (1-5)" min="1"
+                                            max="5" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-btn">
+                                        <button class="nir-btn">Submit Review</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
 
                 <div class="col-md-4 col-xs-12">
-                    <div class="sidebar-sticky">
+                    <div class="sidebar-sticky bookingForm">
                         <div class="list-sidebar">
                             <div class="sidebar-item">
                                 <form class="form-content">
@@ -456,11 +490,10 @@
                                     <div class="row">
                                         <div class="col-lg-12">
                                             <div class="form-group">
-                                                <span class="white">Your choosen date is</span>
-                                                <h3 class="choosen-date white mb-0"><i class="fa fa-calendar"></i> 10 -
-                                                    15 March, 2020 <small class="d-block font-weight-normal">(5 days) <a
-                                                            href="#" class="d-block pink float-right">Change</a></small>
-                                                </h3>
+                                                <label class="white">Your destination is:</label>
+                                                <h2 class="destinationInputTitle white"></h2>
+                                                <input type="hidden" id="destinationHiddenInput"
+                                                    name="destinationTitle">
                                             </div>
                                         </div>
 
@@ -521,28 +554,8 @@
                                         </div>
 
                                         <div class="col-lg-12">
-                                            <div class="form-group bg-white p-3">
-                                                <ul>
-                                                    <li class="d-block pb-1">$150.00 x 2 guests<span
-                                                            class="float-right pink">$300.00</span></li>
-                                                    <li class="d-block pb-1">Booking fee + tax<span
-                                                            class="float-right pink">$10.00</span></li>
-                                                    <li class="d-block  pb-1">Book now &amp; Save<span
-                                                            class="float-right  pink">-$15</span></li>
-                                                    <li class="d-block pb-1">Other fees<span
-                                                            class="float-right pink">Free</span></li>
-                                                    <li class="d-block border-t">
-                                                        <div class="pt-1">
-                                                            <span>Total</span><span
-                                                                class="float-right pink">$350.00</span>
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-12">
                                             <div class="form-group mb-0">
-                                                <a href="#" class="nir-btn w-100">Instant Book</a>
+                                                <button class="nir-btn w-100">Instant Book</button>
                                             </div>
                                         </div>
                                     </div>
@@ -568,8 +581,10 @@
                                         </div>
                                         <div class="trend-content-main">
                                             <div class="trend-content">
-                                                <h6 class="font-weight-normal"><i class="fa fa-map-marker-alt"></i> Thailand</h6>
-                                                <h4><a href="#">Stonehenge, Windsor Castle, and Bath from London</a></h4>
+                                                <h6 class="font-weight-normal"><i class="fa fa-map-marker-alt"></i>
+                                                    Thailand</h6>
+                                                <h4><a href="#">Stonehenge, Windsor Castle, and Bath from London</a>
+                                                </h4>
                                                 <div class="rating-main d-flex align-items-center">
                                                     <div class="rating">
                                                         <span class="fa fa-star checked"></span>
@@ -582,10 +597,13 @@
                                                 </div>
                                             </div>
                                             <div class="trend-last-main">
-                                                <p class="mb-0 trend-para">A wonderful little cottage right on the seashore -
+                                                <p class="mb-0 trend-para">A wonderful little cottage right on the
+                                                    seashore -
                                                     perfect for exploring.</p>
-                                                <div class="trend-last d-flex align-items-center justify-content-between">
-                                                    <p class="mb-0 white"><i class="fa fa-clock-o" aria-hidden="true"></i> 3 days &
+                                                <div
+                                                    class="trend-last d-flex align-items-center justify-content-between">
+                                                    <p class="mb-0 white"><i class="fa fa-clock-o"
+                                                            aria-hidden="true"></i> 3 days &
                                                         2 night</p>
                                                     <div class="trend-price">
                                                         <p class="price white mb-0">From <span>$350.00</span></p>
@@ -600,8 +618,6 @@
                     </div>
                 </div>
             </div>
-
-
         </div>
 
 
