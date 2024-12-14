@@ -260,16 +260,18 @@
                                 <a href="#footerNewsletter">Newsletter</a>
                             </li>
                             <li>
-                                <i class="fa-solid fa-magnifying-glass"></i>
-                                <a>Search</a>
+                                <button id="searchTrigger">
+                                    <i class="fa-solid fa-magnifying-glass" id="searchIcon"></i>
+                                    <a>Search</a>
+                                </button>
                             </li>
                             <li>
                                 <i class="fa-regular fa-envelope"></i>
                                 <a href="./contact.html">Contact</a>
                             </li>
-                            <li>
+                            <li id="user-info">
                                 <i class="fa-regular fa-user"></i>
-                                <a href="./login.html">Login/Signup</a>
+                                <a href="./login.html" id="login-link">Login/Signup</a>
                             </li>
                         </ul>
                     </div>
@@ -404,7 +406,7 @@
                                     </ul>
                                 </li> -->
 
-                                <li class="submenu dropdown customDropdownLi">
+                                <!-- <li class="submenu dropdown customDropdownLi">
                                     <a href="./destination-list.html" class="dropdown-toggle" role="button"
                                         aria-haspopup="true" aria-expanded="false">
                                         Destination
@@ -493,24 +495,14 @@
                                             <div class="customDropdownSubmenuLi"><a href="#">Mumbai</a></div>
                                         </div>
 
-
-
-
-
-
-
-
-
-
-
                                         <div class="customDropdownSubmenuLi"><a href="#">Shirdi</a></div>
                                     </div>
-                                </li>
+                                </li> -->
 
                                 <li class="submenu dropdown">
                                     <a href="./destination.html" class="dropdown-toggle" role="button"
                                         aria-haspopup="true" aria-expanded="false">
-                                        Destination
+                                        All Destinations
                                         <i class="icon-arrow-down" aria-hidden="true"></i>
                                     </a>
                                     <!-- <a href="./destination-list.html" class="dropdown-toggle" data-toggle="dropdown"
@@ -519,17 +511,163 @@
                                         <i class="icon-arrow-down" aria-hidden="true"></i>
                                     </a> -->
                                     <ul class="dropdown-menu">
-                                        <li><a href="./destination.html">All Destinations</a></li>
+                                        <!-- <li><a href="./destination.html">All Destinations</a></li> -->
                                         <li class="submenu dropdown">
                                             <a href="destinations.html?title=Dubai Package">
-                                                Dubai
-                                                <!-- <i class="fa fa-angle-right" aria-hidden="true"></i> -->
+                                                Europe 1
+                                                <i class="fa fa-angle-right" aria-hidden="true"></i>
                                             </a>
-                                            <!-- <ul class="dropdown-menu">
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">Austria</a></li>
+                                                <li><a href="#">Belgium</a></li>
+                                                <li><a href="#">Czech Republic</a></li>
+                                                <li><a href="#">Denmark</a></li>
+                                                <li><a href="#">Finland</a></li>
+                                                <li><a href="#">France</a></li>
+                                                <li><a href="#">Germany</a></li>
+                                                <li><a href="#">Greece</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="submenu dropdown">
+                                            <a href="destinations.html?title=Dubai Package">
+                                                Europe 2
+                                                <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">Hungary</a></li>
+                                                <li><a href="#">Ireland</a></li>
+                                                <li><a href="#">Italy</a></li>
+                                                <li><a href="#">Netherlands</a></li>
+                                                <li><a href="#">Portugal</a></li>
+                                                <li><a href="#">Romania</a></li>
+                                                <li><a href="#">Spain</a></li>
+                                                <li><a href="#">Sweden</a></li>
+                                                <li><a href="#">Switzerland</a></li>
+                                            </ul>
+                                        </li>
+                                        <!-- <li class="submenu dropdown">
+                                            <a href="destinations.html?title=Dubai Package">
+                                                Dubai
+                                                <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                            </a>
+                                            <ul class="dropdown-menu">
                                                 <li><a href="#">Destination Single 1</a></li>
                                                 <li><a href="#">Destination Single 2</a></li>
                                                 <li><a href="#">Destination Single 3</a>
                                                 </li>
+                                            </ul>
+                                        </li> -->
+                                        <li class="submenu dropdown">
+                                            <a href="destinations.html?title=Dubai Package">
+                                                Africa
+                                                <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">Kenya & Tanzania</a></li>
+                                                <li><a href="#">Mauritius</a></li>
+                                                <li><a href="#">Morocco</a>
+                                                <li><a href="#">Seychelles</a>
+                                                <li><a href="#">South Africa</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="submenu dropdown">
+                                            <a href="destinations.html?title=Dubai Package">
+                                                Asia(East)
+                                                <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">Hong Kong & Macau</a></li>
+                                                <li><a href="#">Japan</a></li>
+                                                <li><a href="#">South Korea</a></li>
+                                            </ul>
+                                        </li>
+
+                                        <li class="submenu dropdown">
+                                            <a href="destinations.html?title=Dubai Package">
+                                                Asia(South-East)
+                                                <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">Cambodia</a></li>
+                                                <li><a href="#">Indonesia</a></li>
+                                                <li><a href="#">Laos</a></li>
+                                                <li><a href="#">Malaysia</a></li>
+                                                <li><a href="#">Philippines</a></li>
+                                                <li><a href="#">Singapore</a></li>
+                                                <li><a href="#">Thailand</a></li>
+                                                <li><a href="#">Vietnam</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="submenu dropdown">
+                                            <a href="destinations.html?title=Dubai Package">
+                                                Asia(South)
+                                                <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">Bhutan</a></li>
+                                                <li><a href="#">Maldives</a></li>
+                                                <li><a href="#">Nepal</a></li>
+                                                <li><a href="#">Sri Lanka</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="submenu dropdown">
+                                            <a href="destinations.html?title=Dubai Package">
+                                                CIS Countries
+                                                <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">Armenia</a></li>
+                                                <li><a href="#">Azerbaijan</a></li>
+                                                <li><a href="#">Georgia</a></li>
+                                                <li><a href="#">Kazakhstan</a></li>
+                                                <li><a href="#">Uzbekistan</a></li>
+                                            </ul>
+                                        </li>
+
+                                        <li class="submenu dropdown">
+                                            <a href="destinations.html?title=Dubai Package">
+                                                Middle East
+                                                <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">Egypt</a></li>
+                                                <li><a href="#">Saudi Arabia</a></li>
+                                                <li><a href="#">Turkey</a></li>
+                                                <li><a href="#">United Arab Emirates</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="submenu dropdown">
+                                            <a href="destinations.html?title=Dubai Package">
+                                                Oceania
+                                                <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">Australia</a></li>
+                                                <li><a href="#">Fiji</a></li>
+                                                <li><a href="#">New Zealand</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="submenu dropdown">
+                                            <a href="destinations.html?title=Dubai Package">
+                                                North America
+                                                <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">Canada</a></li>
+                                                <li><a href="#">United States of America</a></li>
+                                            </ul>
+                                        </li>
+
+                                        <li class="submenu dropdown">
+                                            <a href="destinations.html?title=Dubai Package">
+                                                United Kingdom & Ireland
+                                                <!-- <i class="fa fa-angle-right" aria-hidden="true"></i> -->
+                                            </a>
+                                            <!-- <ul class="dropdown-menu">
+                                                <li><a href="#">Australia</a></li>
+                                                <li><a href="#">Fiji</a></li>
+                                                <li><a href="#">New Zealand</a></li>
                                             </ul> -->
                                         </li>
                                     </ul>
@@ -537,64 +675,48 @@
                                 <li class="submenu dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
                                         aria-haspopup="true" aria-expanded="false">
-                                        Cruise Offers
+                                        Theme Tours
                                         <i class="icon-arrow-down" aria-hidden="true"></i>
                                     </a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="#">Cruise Offers 1</a></li>
-                                        <li><a href="#">Cruise Offers 2</a></li>
-                                        <li><a href="#">Cruise Offers 3</a></li>
-                                        <li><a href="#">Cruise Offers 4</a></li>
-                                        <li class="submenu dropdown">
-                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                                                aria-haspopup="true" aria-expanded="false">
-                                                Cruise Offers 5
-                                                <i class="fa fa-angle-right" aria-hidden="true"></i>
-                                            </a>
-                                            <ul class="dropdown-menu">
-                                                <li><a href="#">Cruise Offers Single 1</a></li>
-                                                <li><a href="#">Cruise Offers Single 2</a></li>
-                                                <li><a href="#">Cruise Offers Single 3</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
+                                        <li><a href="#">Adventure & Wildlife</a></li>
+                                        <li><a href="#">Natural Wonder Tours</a></li>
+                                        <li><a href="#">Spiritual & Pilgrimage Tours</a></li>
+                                        <li><a href="#">Culture and Heritage</a></li>
+                                        <li><a href="#">Wellness Ayurveda & Spa</a></li>
+                                        <li><a href="#">Luxury Trains Tours</a></li>
+                                        <li><a href="#">Trekking Tours</a></li>
+                                        <li><a href="#">Beach Tours </a></li>
+                                        <li><a href="#">Festival Tours</a></li>
+                                        <li><a href="#">UNESCO Tour</a></li>
 
-                                <li class="submenu dropdown">
-                                    <a href="./blog.html" class="dropdown-toggle" role="button" aria-haspopup="true"
-                                        aria-expanded="false">Blogs
-                                    </a>
-                                    <!-- <ul class="dropdown-menu">
-                                        <li><a href="blog-list.html">Blog List</a></li>
-                                        <li><a href="blog-grid.html">Blog Grid</a></li>
-                                        <li><a href="blog-full.html">Blog Fullwidth</a></li>
-                                        <li><a href="blog-left.html">Blog Left</a></li>
-                                        <li><a href="blog-list.html">Blog Right</a></li>
-                                        <li><a href="">Blog Masonry</a></li>
-                                        <li><a href="blog-single.html">Blog Single</a></li>
-                                        <li><a href="blog-single-full.html">Blog Single Full</a></li>
-                                    </ul> -->
-                                </li>
-                                <!-- <li class="submenu dropdown">
-                                    <a href="dashboard.html" class="dropdown-toggle" data-toggle="dropdown"
-                                        role="button" aria-haspopup="true" aria-expanded="false">Dashboard <i
-                                            class="fa fa-angle-down" aria-hidden="true"></i></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="dashboard.html">Dashboard</a></li>
-                                        <li><a href="dashboard-my-profile.html">User Profile</a></li>
-                                        <li><a href="dashboard-list.html">User Wishlist</a></li>
-                                        <li><a href="dashboard-messages.html">User Messages</a></li>
-                                        <li><a href="dashboard-history.html">Booking History</a></li>
-                                        <li><a href="dashboard-add-new.html">Add New</a></li>
-                                        <li><a href="dashboard-list.html">Tour List</a></li>
-                                        <li><a href="dashboard-reviews.html">Dashboard Reviews</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="contact.html">Contact Us</a></li> -->
-                                <li><a href="#">Theme Destinations</a></li>
-                                <li><a href="./about.html">About Us</a></li>
+                                <li class="submenu dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        India Top Tours
+                                        <i class="icon-arrow-down" aria-hidden="true"></i>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">Ladakh</a></li>
+                                        <li><a href="#">Jammu & Kashmir</a></li>
+                                        <li><a href="#">Himachal Pradesh</a></li>
+                                        <li><a href="#">Uttarakhand</a></li>
+                                        <li><a href="#">Rajasthan</a></li>
+                                        <li><a href="#">Gujarat</a></li>
+                                        <li><a href="#">North East </a></li>
+                                        <li><a href="#">Maharashtra</a></li>
+                                        <li><a href="#">Karnataka</a></li>
+                                        <li><a href="#">Tamil Nadu</a></li>
+                                        <li><a href="#">Madhya Pradesh</a></li>
+                                        <li><a href="#">Kerala</a></li>
+                                        <li><a href="#">Lakshadweep Islands</a></li>
+                                    </ul>
+                                </li>
                                 <li><a href="#">Offers</a></li>
+                                <li><a href="./about.html">About Us</a></li>
+                                <li><a href="./blog.html">Blogs</a></li>
                             </ul>
                             <!-- <div class="header_sidemenu">
                                 <div class="mhead">
@@ -619,6 +741,28 @@
                     </div>
                 </div><!-- /.container-fluid -->
             </nav>
+        </div>
+        <!-- Black Overlay -->
+        <div id="overlay" style="display: none;"></div>
+        <!-- Hidden search panel -->
+        <div id="searchPanel">
+            <div class="container">
+                <input id="searchTitle" type="text" placeholder="Search a destination by name, location or price"
+                    class="form-control">
+                <p class="mt-5">Search results</p>
+                <hr>
+                <div id="searchResults" class="container mt-3">
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <!-- <div>
+                                <img src="" alt="Destination Image">
+                                <div>
+                                    <h3>Title of destination</h3>
+                                    <p>Price </p>
+                                </div>
+                            </div> -->
+                    </div>
+                </div>
+            </div>
         </div>
         <!-- Navigation Bar Ends -->
     </header>

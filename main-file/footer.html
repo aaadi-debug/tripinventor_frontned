@@ -57,14 +57,15 @@
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 mb-4" id="footerNewsletter">
                         <div class="footer-links">
-                            <h4 class="white">Newsletter</h4>
+                            <h4 class="white" id="newsi">Newsletter</h4>
                             <p>Want to be notified when we launch a new template or an udpate. Just sign up and we'll
                                 send you a notification by email.</p>
-                            <div class="newsletter-form">
-                                <form>
-                                    <input type="email" placeholder="Enter your email">
-                                    <input type="submit" class="nir-btn mt-2 w-100" value="Subscribe">
+                            <div class="newsletter-form" >
+                                <form id="subscribeForm">
+                                    <input type="email" placeholder="Enter your email" required>
+                                    <button type="submit" class="nir-btn mt-2 w-100" >Subscribe</button>
                                 </form>
+                                <div id="subsMessage"></div>
                             </div>
                         </div>
                     </div>
