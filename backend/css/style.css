@@ -128,7 +128,7 @@ h5,
 h6 {
   font-weight: 700;
   font-family: "Minion Pro", sans-serif;
-  margin: 0 0 16px;
+  /* margin-top: 30px; */
   color: #3f3f3f;
   line-height: 1.4;
 }
@@ -564,10 +564,10 @@ small {
   transform: translateY(-50%) !important;
 }
 
-.form-group {
+ /* .form-group {
   width: 100%;
-  display: inline-block;
-}
+  display: inline-block; 
+} */
 
 .form-group select {
   padding: 10px 20px 10px 35px;
@@ -585,15 +585,18 @@ textarea,
 select {
   font-size: 15px;
   font-weight: 300;
-  background-color: #fff;
+  background-color: #4c647c0b;
   border: 1px solid #f1f1f1;
-  border-radius: 0px;
-  padding: 10px 20px;
-  color: #777;
-  margin-bottom: 0;
+  border-radius: 10px;
+  /* padding: px 20px; */
+  margin: 0 8px 0 0;
+  color: #000000;
+  /* margin-bottom: 0; */
   height: 50px;
   box-shadow: none;
-  width: 100%;
+  /* width: 100%; */
+  padding: 14px;
+  margin-bottom: 10px;
 }
 
 input[type=text]:focus,
@@ -622,23 +625,23 @@ select option {
 }
 
 textarea {
-  border-radius: none;
+  /* border-radius: px; */
   resize: vertical;
   height: 120px;
 }
 
 label {
   display: inline-block;
-  color: #777;
+  color:rgba(0, 0, 0, 0.641);
   margin-bottom: 8px;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 15px;
 }
 
-blockquote {
+/* blockquote {
   font-size: 14px;
   font-weight: 400;
-  background-color: #162241;
+  background-color: #0b1326;
   margin-bottom: 15px;
   border: 0;
   padding: 30px 70px 30px 70px;
@@ -647,7 +650,7 @@ blockquote {
   margin: 20 0;
   font-style: italic;
   position: relative;
-}
+} */
 
 
 
@@ -656,7 +659,7 @@ blockquote {
 
 /* 
 ------------------------------------------------------
--------------------- my styles -----------------------w
+-------------------- my styles -----------------------
 ------------------------------------------------------
 */
 
@@ -671,28 +674,15 @@ blockquote {
 .hamburger-menu {
   display: none;
   position: absolute;
-  top: 10px;
-  left: 10px;
-  background: var(--new-primary);
-  color: white;
+  top: 15px;
+  left: 15px;
+  color:var(--new-primary);
   border: none;
-  padding: 10px 15px;
+  padding: 1px 10px;
   border-radius: 4px;
   cursor: pointer;
   z-index: 1000;
-}
-
-/* Tab Buttons Wrapper */
-.tab-buttons-wrapper {
-  position: relative;
-  width: 250px;
-  transition: transform 0.3s ease;
-  overflow-x: hidden;
-}
-
-/* Hidden State for Tab Buttons (Mobile) */
-.tab-buttons-wrapper.hidden {
-  transform: translateX(-100%);
+  border: 1px solid var(--new-primary);
 }
 
 /* Tab buttons */
@@ -742,6 +732,7 @@ blockquote {
 .tab-content {
   flex-grow: 1;
   padding: 20px;
+  margin-top: 35px;
   display: flex;
   flex-direction: column;
 }
@@ -754,29 +745,223 @@ blockquote {
   display: block;
 }
 
+/* Show Sidebar */
+.tab-buttons-wrapper.show {
+left: 0; /* Bring it onscreen */
+transform: translateX(0);
+}
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .tab-container {
-    flex-direction: column;
+#add-blog ,#add-destination{
+  background-color: var(--new-primary);
+  color: white;
+}
+.tab-buttons-wrapper {
+  position: fixed; /* Fix the sidebar */
+  top: 0; /* Align it to the top of the viewport */
+  left: 0; /* Align it to the left of the viewport */
+  width: 250px; /* Set the sidebar width */
+  height: 100vh; /* Full height of the viewport */
+  background-color: var(--new-primary); /* Sidebar background */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Optional shadow for aesthetics */
+  z-index: 1000; /* Ensure it appears above other elements */
+  overflow-y: auto; /* Allow scrolling if content exceeds viewport */
+  transition: transform 0.3s ease-in-out; /* Smooth transition for mobile toggle */
+}
+
+/* Initially hide the sidebar in mobile view */
+.tab-buttons-wrapper.hidden {
+  transform: translateX(-100%); /* Move off-screen */
+}
+
+/* Show the sidebar */
+.tab-buttons-wrapper.show {
+  transform: translateX(0); /* Bring on-screen */
+}
+
+/* For larger screens: Sidebar always visible */
+@media (min-width: 768px) {
+  .tab-buttons-wrapper {
+    position: fixed; /* Keep it fixed for desktop */
+    transform: none; /* Always visible */
+    left: 0; /* Start aligned */
+    width: 250px; /* Fixed width */
+    box-shadow: none; /* Optional */
   }
 
+  .hamburger-menu {
+    display: none; /* Hide hamburger button on larger screens */
+  }
+}
+
+ .tab-content {
+  margin-left: 250px; 
+  padding: 20px;
+} 
+#add-destination-form h5{
+ margin-top: 20px;
+}
+.submit{
+  background-color: var(--new-secondary);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px ;
+  margin-top: 20px;
+}
+.reset{
+  /* background-color: rgba(68, 68, 116, 0.915); */
+  background-color: var(--new-primary);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px ;
+}
+.cancel{
+  background-color: grey;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px ;
+}
+/* Base styles for sidebar */
+.tab-buttons-wrapper {
+  position: fixed;
+  top: 0;
+  left: -250px; /* Start hidden */
+  width: 250px;
+  height: 100vh;
+  background-color: var(--new-primary);
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  overflow-y: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Show sidebar */
+.tab-buttons-wrapper.show {
+  left: 0; /* Fully visible */
+  transform: translateX(0);
+}
+
+/* Hide sidebar */
+.tab-buttons-wrapper.hidden {
+  left: -250px;
+  transform: translateX(-100%);
+}
+
+.tab-buttons-header {
+  display: flex;
+  /* gap: 10px; */
+  justify-content: space-between;
+  align-items: start;
+}
+.tab-buttons-header button {
+  background: none;
+  border: none;
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+  display: block;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  color: var(--new-primary);
+  background-color: white;
+  border: 1px solid var(--new-primary);
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  z-index: 1100; /* Above the sidebar */
+}
+
+/* Content offset in large screens */
+.tab-content {
+  margin-left: 250px;
+  padding: 20px;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .tab-buttons-wrapper {
+    left: -250px; /* Hidden by default */
+    transform: translateX(-100%);
+  }
+
+  .tab-buttons-wrapper.show {
+    left: 0; /* Show when active */
+    transform: translateX(0);
+  }
+
+  .tab-content {
+    margin-left: 0; /* No offset when sidebar is hidden */
+  }
+
+  .hamburger-menu {
+    display: block; /* Show hamburger button */
+  }
+}
+/* Base styles for the sidebar */
+.tab-buttons-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100vh;
+  background-color: var(--new-primary);
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  overflow-y: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Initially hide sidebar for small screens */
+.tab-buttons-wrapper.hidden {
+  transform: translateX(-100%);
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+  display: none;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  color: var(--new-primary);
+  background-color: white;
+  border: 1px solid var(--new-primary);
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+/* Content offset */
+.tab-content {
+  margin-left: 250px;
+  padding: 20px;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  /* Hide sidebar by default */
+  .tab-buttons-wrapper {
+    transform: translateX(-100%);
+  }
+
+  /* Show hamburger button */
   .hamburger-menu {
     display: block;
   }
 
-  .tab-buttons-wrapper {
-    position: absolute;
-    height: 100%;
-    z-index: 999;
-    top: 0;
-    left: 0;
-    transform: translateX(-100%);
+  /* Content should have no offset */
+  .tab-content {
+    margin-left: 0;
   }
 
-  .tab-content {
-    flex-grow: 1;
-    padding: 20px;
-    margin-top: 50px;
+  /* Sidebar visible when `.show` is added */
+  .tab-buttons-wrapper.show {
+    transform: translateX(0);
   }
 }

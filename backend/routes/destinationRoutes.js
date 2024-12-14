@@ -18,10 +18,24 @@ const Destination = require('../models/Destination');
 //     }
 //     res.status(200).json(destination);
 // });
+function serchQuery(title) {
+    // Build a dynamic query
+    const query = {};
+    if (title) query.title = { $regex: title, $options: 'i' }; // Case-insensitive search
+
+    // // Fetch destinations based on the query
+    const destinationss = Destination.find(query);
+
+    if (destinations.length === 0) {
+        return res.status(404).json({ message: 'No destinations found' });
+    }
+
+    return res.status(200).json(destinationss);
+}
 // Fetch all destinations or a specific destination by title
 router.get('/', async (req, res) => {
     try {
-        const { title } = req.query;
+        const { title, location, price } = req.query;
 
         if (title) {
             // Fetch a single destination by title
@@ -35,6 +49,9 @@ router.get('/', async (req, res) => {
         // Fetch all destinations
         const destinations = await Destination.find();
         res.status(200).json(destinations);
+        // serchQuery(title)
+
+
     } catch (error) {
         res.status(500).json({ message: error.message });
     }
